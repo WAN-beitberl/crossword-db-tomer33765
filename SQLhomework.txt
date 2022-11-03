@@ -1,0 +1,21 @@
+1. The information that is stored in a table is the information about the words in 
+   the crossword. That information should be stored in a table because there are
+   a lot of words that are used in the website and they share the same qualities.
+
+2. The information that is not stored in a table should be the information that is
+   a singular entity, like the matrix of the crossword, the player's score and more.
+
+3. The information is stored in two different tables - a table for words written 
+   downwards, and a table for words written across. Each table has 5 columns:
+   number of the word, the hint, the word itself, the length of the word, and a 
+   boolean value that answers if the user has already guessed correctly.
+   All of that is shown in the diagram.
+
+4. CREATE TABLE Across(Num INT, Hint TEXT, Word TEXT, Length INT, IsSolved BOOL);
+   CREATE TABLE Down(Num INT, Hint TEXT, Word TEXT, Length INT, IsSolved BOOL);
+   INSERT INTO Down VALUES(1, "Mexican food", "Taco", 4, FALSE);
+   INSERT INTO Down VALUES(2, "Mexican food", "Churro", 6, FALSE);
+   INSERT INTO Across VALUES(1, "A smart animal", "Orangutan", 9, FALSE);
+   INSERT INTO Across VALUES(2, "Something that burns", "Fire", 4, FALSE);
+   SELECT * FROM Across;
+   SELECT * FROM Dowm;
